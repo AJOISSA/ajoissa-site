@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogi</title>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #111;
+  }
+  header {
+    background: url('logo.png') no-repeat center top / contain;
+    height: 200px;
+    background-color: #000;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+  }
+  nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: linear-gradient(to right, #000, #222);
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: inset -5px 0px 15px rgba(255,255,255,0.1);
+  }
+  nav a:hover {
+    background: #440000;
+  }
+  main {
+    padding: 2rem;
+  }
+  .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .card h3 {
+    margin: 0.5rem 0;
+  }
+</style>
+
+</head>
+
+<header></header>
+<nav>
+  <a href="index.html">Etusivu</a>
+  <a href="palvelut/index.html">Palvelut</a>
+  <a href="fanituotteet/index.html">Fanituotteet</a>
+  <a href="romut/index.html">Romukauppa</a>
+  <a href="projektit/index.html">Projektit</a>
+  <a href="blogi/index.html">Blogi</a>
+</nav>
+<main>
+
+  <h1>Blogi</h1>
+  <div id="content"></div>
+  <script src="script.js"></script>
+</body>
+</html>
