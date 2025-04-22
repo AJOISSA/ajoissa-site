@@ -38,6 +38,8 @@
     }
     main {
       padding: 2rem;
+      max-width: 900px;
+      margin: auto;
     }
     .card {
       border: 1px solid #ccc;
@@ -53,6 +55,62 @@
     }
     .card h3 {
       margin: 0.5rem 0;
+    }
+
+    footer {
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,1)), url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+      background-color: #000;
+      background-repeat: repeat;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    @media(min-width: 600px) {
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+      }
+    }
+    .footer-left, .footer-center, .footer-right {
+      flex: 1;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+    button[type="submit"] {
+      background-color: #6b0000;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #bbb;
     }
   </style>
 </head>
@@ -77,6 +135,35 @@
     <h1>Fanituotteet</h1>
     <div id="content"></div>
   </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p><strong>Sähköposti:</strong> <a href="mailto:ajoissaoy@gmail.com">ajoissaoy@gmail.com</a></p>
+        <p><strong>Paikkakunta:</strong> Koski TL</p>
+        <p><strong>Puhelin:</strong> <a href="tel:+358458042250">+358 45 804 2250</a></p>
+      </div>
+      <div class="footer-center">
+        <p><strong>Ota yhteyttä</strong></p>
+        <form action="https://formspree.io/f/mnndalop" method="POST">
+          <input type="hidden" name="_subject" value="Uusi viesti AJOISSA-sivustolta!">
+          <input type="text" name="nimi" placeholder="Nimi" required>
+          <input type="email" name="email" placeholder="Sähköposti" required>
+          <textarea name="viesti" rows="4" placeholder="Viesti" required></textarea>
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit">Lähetä</button>
+        </form>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">© AJOISSA Motorsport & Customs – Building dreams, driving passion.</p>
+      </div>
+      <div class="footer-right">
+        <p><strong>Seuraa meitä:</strong></p>
+        <p>
+          <a href="https://www.tiktok.com/@ajoissa_" target="_blank">TikTok</a><br />
+          <a href="https://www.youtube.com/@AJOISSA" target="_blank">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
