@@ -180,16 +180,17 @@
         <p><strong>Paikkakunta:</strong> Koski Tl</p>
         <p><strong>Puhelin:</strong> <a href="tel:+358458042250">+358 45 804 2250</a></p>
       </div>
-
       <div class="footer-center">
         <p><strong>Ota yhteyttä</strong></p>
         <form action="https://formspree.io/f/mnndalop" method="POST">
           <input type="hidden" name="_subject" value="Uusi viesti AJOISSA-sivustolta!">
-          <input type="text" name="nimi" placeholder="Nimi" required />
-          <input type="email" name="email" placeholder="Sähköposti" required />
+          <input type="text" name="nimi" placeholder="Nimi" required>
+          <input type="email" name="email" placeholder="Sähköposti" required>
           <textarea name="viesti" rows="4" placeholder="Viesti" required></textarea>
+          <input type="text" name="_gotcha" style="display:none"> <!-- Anti-spam -->
           <button type="submit">Lähetä</button>
         </form>
+        
         <p style="margin-top: 1rem; font-size: 0.8rem;">© AJOISSA Motorsport & Customs – Building dreams, driving passion.</p>
       </div>
 
