@@ -1,0 +1,18 @@
+[
+    {
+      "product": "T-paita AJOISSA",
+      "price": 20,
+      "image": "t-paita.jpg"
+    },
+    {
+      "product": "Lippis AJOISSA",
+      "price": 15,
+      "image": "lippis.jpg"
+    },
+    {
+      "product": "Tarra-setti",
+      "price": 5,
+      "image": "tarrat.jpg"
+    }
+  ]
+  

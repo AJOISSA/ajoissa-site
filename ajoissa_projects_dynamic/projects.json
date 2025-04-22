@@ -1,14 +1,14 @@
 [
   {
-    "title": "Opel Kadett C",
-    "image": "opel_nyt.jpg",
-    "description": "T\u00e4ysi entis\u00f6inti ja candy winefire viimeistely.",
+    "title": "Opel Ennen",
+    "image": "opel_ennen.jpg",
+    "description": "Tässä näet auton ennen.",
     "link": "#"
   },
   {
-    "title": "BMW E30 Drift",
-    "image": "bmw_e30.jpg",
-    "description": "Driftauskilpuri E85-konversiolla ja leve\u00e4ll\u00e4 asenteella.",
+    "title": "Opel Nyt",
+    "image": "opel_nyt.jpg",
+    "description": "tällähetkellä",
     "link": "#"
   }
 ]

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -6,74 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJOISSA Verkkokauppa</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 2rem; }
-    .card { background: #fff; border-radius: 5px; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    button { padding: 0.5rem 1rem; border: none; background: #111; color: white; cursor: pointer; }
-    button:hover { background: #6b0000; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #000;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      background: linear-gradient(to right, #000, #222);
+      margin: 5px;
+      border-radius: 5px;
+      box-shadow: inset -5px 0px 15px rgba(255,255,255,0.1);
+    }
+    nav a:hover {
+      background: #440000;
+    }
+    main {
+      padding: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 5px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #111;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #6b0000;
+    }
   </style>
 </head>
+
 <body>
+
+  <nav>
+    <a href="index.html">Etusivu</a>
+    <a href="palvelut.html">Palvelut</a>
+    <a href="verkkokauppa.html">Verkkokauppa</a>
+    <a href="fanituotteet.html">Fanituotteet</a>
+    <a href="romukauppa.html">Romukauppa</a>
+    <a href="projektit.html">Projektit</a>
+    <a href="blogi.html">Blogi</a>
+    <a href="https://www.tiktok.com/@ajoissa_" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/@AJOISSA" target="_blank">YouTube</a>
+    <a href="yhteystiedot.html">Yhteystiedot</a>
+  </nav>
+
   <main>
     <h1>Verkkokauppa</h1>
     
-<h2>Fanituotteet</h2>
-<div class="card">
-  <h3>T-paita AJOISSA</h3>
-  <p>20€</p>
-  <button onclick="addToCart('T-paita AJOISSA', 20)">Lisää koriin</button>
-</div>
-<div class="card">
-  <h3>Lippis AJOISSA</h3>
-  <p>15€</p>
-  <button onclick="addToCart('Lippis AJOISSA', 15)">Lisää koriin</button>
-</div>
-<div class="card">
-  <h3>Tarra-setti</h3>
-  <p>5€</p>
-  <button onclick="addToCart('Tarra-setti', 5)">Lisää koriin</button>
-</div>
-<br>
-<button onclick="goToCheckout()">Siirry kassalle</button>
+    <h2>Fanituotteet</h2>
 
-<script>
-  let cart = [];
+    <div class="card">
+      <h3>T-paita AJOISSA</h3>
+      <p>20€</p>
+      <button onclick="addToCart('T-paita AJOISSA', 20)">Lisää koriin</button>
+    </div>
+    <div class="card">
+      <h3>Lippis AJOISSA</h3>
+      <p>15€</p>
+      <button onclick="addToCart('Lippis AJOISSA', 15)">Lisää koriin</button>
+    </div>
+    <div class="card">
+      <h3>Tarra-setti</h3>
+      <p>5€</p>
+      <button onclick="addToCart('Tarra-setti', 5)">Lisää koriin</button>
+    </div>
 
-  function addToCart(product, price) {
-    cart.push({ product, price });
-    alert(product + " lisätty koriin!");
-  }
+    <br>
+    <button onclick="goToCheckout()">Siirry kassalle</button>
+  </main>
 
-  function goToCheckout() {
-    if (cart.length === 0) {
-      alert("Ostoskori on tyhjä.");
-      return;
+  <script>
+    let cart = [];
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      alert(product + " lisätty koriin!");
     }
 
-    let message = "Tuotetilaus:\n";
-    let total = 0;
-    cart.forEach(item => {
-      message += "- " + item.product + " (" + item.price + "€)\n";
-      total += item.price;
-    });
-    message += "\nYhteensä: " + total + "€\n\nNimi: \nSähköposti: \n";
+    function goToCheckout() {
+      if (cart.length === 0) {
+        alert("Ostoskori on tyhjä.");
+        return;
+      }
 
-    let mailtoLink = "mailto:ajoissaoy@gmail.com?subject=Tuotetilaus&body=" + encodeURIComponent(message);
-    window.location.href = mailtoLink;
-  }
-</script>
+      let message = "Tuotetilaus:\n";
+      let total = 0;
+      cart.forEach(item => {
+        message += "- " + item.product + " (" + item.price + "€)\n";
+        total += item.price;
+      });
+      message += "\nYhteensä: " + total + "€\n\nNimi: \nSähköposti: \n";
 
-  </main>
+      let mailtoLink = "mailto:ajoissaoy@gmail.com?subject=Tuotetilaus&body=" + encodeURIComponent(message);
+      window.location.href = mailtoLink;
+    }
+  </script>
+
 </body>
 </html>
-<nav>
-  <a href="index.html">Etusivu</a>
-  <a href="palvelut.html">Palvelut</a>
-  <a href="verkkokauppa.html">Verkkokauppa</a>
-  <a href="fanituotteet.html">Fanituotteet</a>
-  <a href="romukauppa.html">Romukauppa</a>
-  <a href="projektit.html">Projektit</a>
-  <a href="blogi.html">Blogi</a>
-  <a href="https://www.tiktok.com/@ajoissa_" target="_blank">TikTok</a>
-  <a href="https://www.youtube.com/@AJOISSA" target="_blank">YouTube</a>
-  <a href="yhteystiedot.html">Yhteystiedot</a>
-</nav>

@@ -1,4 +1,3 @@
-
 fetch('projects.json')
   .then(response => response.json())
   .then(projects => {

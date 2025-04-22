@@ -1,4 +1,3 @@
-
 fetch('blogi.json')
   .then(response => response.json())
   .then(items => {
@@ -6,11 +5,10 @@ fetch('blogi.json')
     items.forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
-      let html = '';
-    
-      html = `<h3>${item.title}</h3><small>${item.date}</small><p>${item.content}</p>`;
-        
+
+      let html = `<h3>${item.title}</h3><small>${item.date}</small><p>${item.content}</p>`;
+      
       card.innerHTML = html;
       container.appendChild(card);
-    }});
+    });
   });
