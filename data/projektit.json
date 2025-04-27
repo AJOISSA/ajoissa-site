@@ -1,13 +1,13 @@
 [
   {
     "title": "Opel Ennen",
-    "image": "opelennen.jpg.jpg",
+    "image": "/img/opel_ennen.jpg",
     "description": "Tässä näet auton ennen.",
     "link": "#"
   },
   {
     "title": "Opel Nyt",
-    "image": "opelnyt.jpg.jpg",
+    "image": "/img/opel_nyt.jpg",
     "description": "tällä hetkellä",
     "link": "#"
   }

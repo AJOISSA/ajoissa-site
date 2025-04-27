@@ -1,13 +1,15 @@
-fetch('blogi.json')
+
+fetch('/data/palvelut.json')
   .then(response => response.json())
   .then(items => {
     const container = document.getElementById('content');
     items.forEach(item => {
       const card = document.createElement('div');
       card.className = 'card';
+      let html = '';
 
-      let html = `<h3>${item.title}</h3><small>${item.date}</small><p>${item.content}</p>`;
-      
+      html = `<h3>${item.service}</h3><p>${item.description}</p><p>${item.price}</p>`;
+
       card.innerHTML = html;
       container.appendChild(card);
     });
